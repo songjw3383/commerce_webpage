@@ -1,0 +1,17 @@
+.content {
+    width: 100%;
+    height: 100vh;
+}
+
+.content.two {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.bg1 {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+

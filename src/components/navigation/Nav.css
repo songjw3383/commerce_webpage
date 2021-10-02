@@ -1,0 +1,90 @@
+.navBar {
+    width: 100%;
+    max-height: 10vh;
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    background-color: transparent;
+    position: fixed;
+    border-bottom: 1px solid black;
+    z-index: 100;
+}
+.nav__logo {
+    width: 300px;
+    z-index: 100;
+    display: flex;
+    padding-top: 2rem;
+    margin-left: 2rem;
+}
+.nav__logo > img {
+    width: 50%;
+    height: 50%;
+}
+.nav__contents{
+    display: flex;
+    
+}
+.nav__burger {
+    display: flex;
+    justify-content: flex-end;
+    display: none;
+    cursor: pointer;
+    margin-right: 2rem;
+}
+
+.nav__contents li {
+    padding: 0 2rem 0 2rem;
+    list-style-type: none;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.nav__contents a {
+    text-decoration: none;
+    color: black;
+}
+
+
+
+
+/* Responsive CSS Part */
+@media screen and (max-width: 920px) 
+{
+    .navBar {
+        justify-content: space-between;
+        width: 95%;
+    }
+    .nav__burger {
+        display: block;
+        z-index: 100;
+    }
+    .nav__contents {
+        display: none;
+    }
+
+    .nav__contents.unactive {
+        display: block;
+        position: absolute;
+        top: 40px;
+        right: 0;
+        padding-top: 3rem;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+    .nav__contents.unactive li {
+        height: 8vh;
+        width: 100%;
+        display: flex;
+        border-bottom: 1px solid black;
+        
+        justify-content: center;
+        align-items: center;
+    }
+    .nav__contents.unactive li:hover{
+        background-color: white;
+        
+    }
+}

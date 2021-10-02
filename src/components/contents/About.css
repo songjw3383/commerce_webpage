@@ -1,0 +1,31 @@
+.about {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.description {
+    display: flex;
+}
+
+.description > p {
+    padding: 2rem;
+    line-height: 2rem
+}
+
+.title > span {
+    font-size: 3rem;
+    font-weight: 600;
+    border-bottom: 2px solid gray;
+}
+
+.logo {
+    padding-top: 5rem;
+    
+}
+
+.logo > img {
+    width: 150px;
+}
