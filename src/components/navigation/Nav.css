@@ -1,28 +1,28 @@
 .navBar {
+    position: relative;
     width: 100%;
     max-height: 10vh;
     display: flex;
     align-items: center;
-    padding: 1rem;
+    padding: 1rem 0rem 1rem 0rem ;
     background-color: transparent;
     position: fixed;
     border-bottom: 1px solid black;
     z-index: 100;
+    justify-content: space-around;
 }
 .nav__logo {
+    margin-top: 2rem;
     width: 300px;
     z-index: 100;
-    display: flex;
-    padding-top: 2rem;
-    margin-left: 2rem;
 }
 .nav__logo > img {
     width: 50%;
     height: 50%;
 }
 .nav__contents{
+    padding-right: 10rem;
     display: flex;
-    
 }
 .nav__burger {
     display: flex;
@@ -33,7 +33,7 @@
 }
 
 .nav__contents li {
-    padding: 0 2rem 0 2rem;
+    padding: 0 4rem 0 4rem;
     list-style-type: none;
     font-weight: 700;
     cursor: pointer;
@@ -44,6 +44,19 @@
     color: black;
 }
 
+.nav__cart {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav__cart > span {
+    font-size: 1.2rem;
+    padding: 0 0.5rem 0 0.5rem;
+}
+
+
+
 
 
 
@@ -51,8 +64,9 @@
 @media screen and (max-width: 920px) 
 {
     .navBar {
-        justify-content: space-between;
-        width: 95%;
+        justify-content: space-around;
+        width: 100%;
+        align-items: center;
     }
     .nav__burger {
         display: block;
@@ -65,9 +79,9 @@
     .nav__contents.unactive {
         display: block;
         position: absolute;
-        top: 40px;
-        right: 0;
-        padding-top: 3rem;
+        top: 75px;
+        left: -20px;
+        
         display: flex;
         flex-direction: column;
         width: 100%;
@@ -86,5 +100,8 @@
     .nav__contents.unactive li:hover{
         background-color: white;
         
+    }
+    .nav__cart {
+        margin-left: 2rem;
     }
 }

@@ -20,7 +20,6 @@ export default function itemReducer(state = initialState, action) {
             return {
                 ...state,
                 num: state.num + 1,
-                price: state.price ++
             };
         case DECREASE:
             return {

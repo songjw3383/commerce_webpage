@@ -6,12 +6,17 @@
   align-items: center;
 }
 
-.product > img {
+.product > a > img {
   width: 297px;
   height: 445px;
   cursor: pointer;
 }
 
-.product > img:hover {
-    transform: scale(1.1);
+.product > span {
+  font-weight: 600;
+}
+
+.product > a> img:hover {
+    transform: scale(1.03);
+    transition: transform 400ms;
 }

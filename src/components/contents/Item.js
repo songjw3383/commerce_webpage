@@ -1,21 +1,21 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import "./Item.css"
 
-function Item({product}) {
-
-    // const replaceFunc = () => {
-    //     let text = product.description;
-    //     text = text.replace(/<(\/)?([a-zA-Z]*)(\s[a-zA-Z]*=[^>]*)?(\s)*(\/)?>/ig, "");
-    //     return text;
-    // }
-
-    console.log(product)
-    return (
-        <div className="product" id={product.id}>
-            <img src={product?.image?.url} alt="" />
-            <h4 className="title">{product.name}</h4>
-            <span className="price">{product.price.formatted}</span>
+function Item({product, onAddToCart}) {
+        console.log(onAddToCart)
+        return (
+        <div className="product">
+            <Link to={{
+                pathname: `/Products/${product.id}`,
+                onAddToCart: onAddToCart,
+                state:{productDetail:product}
             
+            }} 
+                ><img src={product?.image?.url} alt="" />
+            </Link> 
+            <h4 className="title">{product.name}</h4>
+            <span className="price">{product.price.formatted}원</span>
         </div>
     )
 }
