@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import "./Items.css"
 import Item from './Item';
+import Footer from './Footer';
 // import { useDispatch, useSelector} from "react-redux";
 // import { decreaseNum, increaseNum } from '../reducers/reducer';
 

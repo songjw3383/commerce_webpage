@@ -24,7 +24,7 @@ function ItemDetail(props) {
         let total = props.location.state.productDetail.price.raw;
         return total * count
     }
-    console.log(props)
+    // console.log(props)
     return (
         <div className="itemDetail">
             <div className="itemDetail__left">

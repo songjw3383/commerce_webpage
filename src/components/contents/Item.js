@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import "./Item.css"
 
 function Item({product, onAddToCart}) {
-        console.log(onAddToCart)
+        
         return (
         <div className="product">
             <Link to={{

@@ -10,6 +10,7 @@ function MainContent() {
             <div className="content">
                 <div className="content one">
                     <img src={bg1} alt="" className="bg1"/>
+                    
                 </div>
                 <div className="content two">
                     <img src={bg2} alt="" />

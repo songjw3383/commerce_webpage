@@ -7,7 +7,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 
 function Nav({totalItems}) {
-    const [list, setList] = useState([])
+    
     const [burgerButton, setburgerButton] = useState(false)
     console.log(totalItems)
     const responsiveHandling = () => {
@@ -29,11 +29,12 @@ function Nav({totalItems}) {
                     <li><Link to="/Products">Store</Link></li>
                     <li><Link to="/signin">Sign In</Link></li>
                 </ul>
-            
-            <div className="nav__cart">
-                <ShoppingCartIcon fontSize="medium" />
-                <span>{totalItems}</span>
-            </div> 
+            <Link to="/Cart">
+                <div className="nav__cart">
+                    <ShoppingCartIcon fontSize="medium" />
+                    <span>{totalItems}</span>
+                </div>
+            </Link> 
             <div className="nav__burger" onClick={responsiveHandling}><MenuIcon /></div>
         </nav>
     )

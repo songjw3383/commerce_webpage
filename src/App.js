@@ -9,6 +9,7 @@ import About from './components/contents/About';
 import Footer from './components/contents/Footer';
 import { commerce } from './lib/commerce';
 import ItemDetail from './components/contents/ItemDetail';
+import Cart from './components/contents/Cart';
 
 function App() {
   const [products, setProducts] = useState([]);
@@ -25,17 +26,33 @@ function App() {
   }
 
   const handleAddToCart = async (productId, quantity) => {
-    const item = await commerce.cart.add(productId, quantity);
+    const {cart} = await commerce.cart.add(productId, quantity);
 
-    setCart(item.cart)
+    setCart(cart)
+  }
+
+  const handleUpdateCartQty = async (productId, quantity) => {
+    const {cart} = await commerce.cart.update(productId, { quantity });
+
+    setCart(cart)
+  }
+
+  const handleRemoveFromCart = async (productId) => {
+    const { cart } = await commerce.cart.remove(productId);
+
+    setCart(cart);
+  }
+
+  const handleEmpty = async () => {
+    const {cart} = await commerce.cart.empty();
+
+    setCart(cart)
   }
 
   useEffect(() => {
     fetchProducts();
     fetchCart();
   }, [])
-
-  console.log(cart);
 
   return (
     <div className="app">
@@ -47,8 +64,15 @@ function App() {
             <Route path="/Products/:id" render={(props) => <ItemDetail {...props} />} />
             <Route path="/Products" render={() => <Items onAddToCart={handleAddToCart} products={products} />} />
             <Route path="/About" render={() => <About />} />
-            
+            <Route path="/Cart" render={() => 
+              <Cart 
+                cart={cart}
+                handleUpdateCartQty={handleUpdateCartQty}
+                handleRemoveFromCart={handleRemoveFromCart}
+                handleEmpty={handleEmpty}
+                />} />
           </Switch>
+          
       </Router>
       
         
