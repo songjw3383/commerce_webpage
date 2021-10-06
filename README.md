@@ -30,7 +30,7 @@
 
 :paperclip: **페이지 구성 (flow chart)** 
 
-<img src="https://user-images.githubusercontent.com/56250064/136156422-71c66351-2cb2-45de-bdae-dfa2e0087dbc.png" witdh="500" height="300">
+<img src="https://user-images.githubusercontent.com/56250064/136156422-71c66351-2cb2-45de-bdae-dfa2e0087dbc.png" witdh="700" height="400">
 
 
 :page_facing_up: **gh-pages** (예정) : 
