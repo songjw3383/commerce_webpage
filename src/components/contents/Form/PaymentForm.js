@@ -48,6 +48,7 @@ function PaymentForm({ checkoutToken,shippingData, backStep, onCaptureCheckout, 
 
                 nextStep();
         }
+        
     }
 
     return (
