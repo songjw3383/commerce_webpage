@@ -9,7 +9,7 @@ import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 function Nav({totalItems}) {
     
     const [burgerButton, setburgerButton] = useState(false)
-    console.log(totalItems)
+    //console.log(totalItems)
     const responsiveHandling = () => {
         setburgerButton(!burgerButton)
     }
@@ -25,7 +25,7 @@ function Nav({totalItems}) {
                 <ul className={burgerButton? "nav__contents unactive" : "nav__contents"}>
                     <li><Link to="/">Home</Link></li>
                     <li><Link to="/About">About</Link></li>
-                    <li>Project</li>
+                    <li><Link to="/Project">Project</Link></li>
                     <li><Link to="/Products">Store</Link></li>
                     <li><Link to="/signin">Sign In</Link></li>
                 </ul>

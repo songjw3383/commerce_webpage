@@ -52,6 +52,31 @@
     justify-content: space-between;
 }
 
+.cart__checkout {
+  margin-top: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.checkout__button {
+  border: 1px solid gray;
+  padding: 1rem 1.5rem 1rem 1.5rem;
+  background-color: white;
+  cursor: pointer;
+}
+
+.checkout__button > a {
+  text-decoration: none;
+  color: black;
+}
+
+/* 
+.checkout__button:hover {
+  
+  transition: ease-in-out 400ms;
+} */
+
 .emptyMsg {
     margin-top: 5rem;
 }

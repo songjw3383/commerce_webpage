@@ -1,7 +1,8 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 import './Cart.css'
 
-function Cart({cart, handleUpdateCartQty, handleRemoveFromCart, handleEmpty}) {
+function Cart({cart, handleUpdateCartQty, handleRemoveFromCart, handleEmptyCart}) {
     const isEmpty = !cart?.line_items?.length;
     
     const EmptyCart = () => {
@@ -16,7 +17,7 @@ function Cart({cart, handleUpdateCartQty, handleRemoveFromCart, handleEmpty}) {
                     <li>Name</li>
                     <li>Quantity</li>
                     <li>Price</li>
-                    <button onClick={handleEmpty}>Remove all</button>
+                    <button onClick={handleEmptyCart}>Remove all</button>
                 </ul>
             </div>
             {cart.line_items.map((item) => (
@@ -29,8 +30,11 @@ function Cart({cart, handleUpdateCartQty, handleRemoveFromCart, handleEmpty}) {
                 </div>
             ))}
             <div className="cart__total">
-                <h4>order total</h4>
+                <h4>Order Total</h4>
                 <h4>{cart.subtotal.formatted_with_code}</h4>
+            </div>
+            <div className="cart__checkout">
+                <button className="checkout__button"><Link to="/checkout">Checkout</Link></button>
             </div>
         </div>
     )

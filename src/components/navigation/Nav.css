@@ -1,7 +1,7 @@
 .navBar {
     position: relative;
     width: 100%;
-    max-height: 10vh;
+    height: 80px;
     display: flex;
     align-items: center;
     padding: 1rem 0rem 1rem 0rem ;
@@ -71,7 +71,6 @@
     .navBar {
         justify-content: space-around;
         width: 100%;
-        align-items: center;
     }
     .nav__burger {
         display: block;
@@ -82,9 +81,9 @@
     }
 
     .nav__contents.unactive {
-        display: block;
+        
         position: absolute;
-        top: 75px;
+        top: 97px;
         left: -20px;
         
         display: flex;
@@ -94,7 +93,7 @@
         align-items: center;
     }
     .nav__contents.unactive li {
-        height: 8vh;
+        height: 60px;
         width: 100%;
         display: flex;
         border-bottom: 1px solid black;
@@ -104,7 +103,7 @@
     }
     .nav__contents.unactive li:hover{
         background-color: white;
-        
+        transition: transform 400ms;
     }
     .nav__cart {
         margin-left: 2rem;
