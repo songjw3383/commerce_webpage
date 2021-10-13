@@ -20,7 +20,6 @@ React-router-dom을 활용하여 SPA의 구조 형태로 웹사이트를 제작�
 1 명
 
 :paperclip: **페이지 구성 (flow chart)** 
-
 <img src="https://user-images.githubusercontent.com/56250064/136156422-71c66351-2cb2-45de-bdae-dfa2e0087dbc.png" witdh="500" height="300">
 
 
@@ -35,7 +34,7 @@ React-router-dom을 활용하여 SPA의 구조 형태로 웹사이트를 제작�
 2. CSS
 3. Javascript
 4. Redux
-5. Material-UI (for icons)
+5. Material-UI
 6. commerce.js (for backend)
 <hr/>
 
@@ -49,7 +48,7 @@ React-router-dom을 활용하여 SPA의 구조 형태로 웹사이트를 제작�
 ### - About Page
 ![About](https://user-images.githubusercontent.com/56250064/136158630-9d082efd-bede-437d-b5ce-2daa4fe4e050.png)
 
-### -Store Page
+### - Store Page
 ![Store](https://user-images.githubusercontent.com/56250064/136158983-82d14236-b394-407a-a3c0-7859c3739661.png)
 
 ## 시연 영상
@@ -63,10 +62,10 @@ React-router-dom을 활용하여 SPA의 구조 형태로 웹사이트를 제작�
 - MongoDB 와 Mongoose를 사용하여 구축해볼 예정.
 3. 결제 기능 --- 완료 :heavy_check_mark:
 - Commerce.js 에 내장된 API를 활용해볼 예정.
-4. Project 페이지
+4. Project 페이지 --- 완료 :heavy_check_mark:
 
 
-### 결제 기능 시연 영상
+### 3. 결제 기능 상세
 ![payment](https://user-images.githubusercontent.com/56250064/136744637-e49df9e2-8df4-415d-9a22-607f77d6432e.gif)
 
 #### 상세 설명
@@ -76,3 +75,11 @@ React-router-dom을 활용하여 SPA의 구조 형태로 웹사이트를 제작�
 -  최종 결제는 두 가지 방법 중 두번 째 방법을 선택하였으며, 결제 완료 후 장바구니 아이템은 초기화 되게 됩니다.
 1. Commerce.js 의 Payment gateway에 stripe을 등록하고 연동하여 최종 결제 하는 방법 ( payment gateway에 카드 등록 아직 안함)
 2. 입력된 사용자 배송 정보를 사용하면서 단순한 결제 완료 목업 페이지를 보여주는 방법 - :heavy_check_mark:
+
+### 4. 프로젝트 페이지 상세
+![project](https://user-images.githubusercontent.com/56250064/136909678-09875a73-f71f-4bbf-88d0-48563fdd6e4e.gif)
+
+#### 상세설명
+- Navbar에 효과를 추가함으로써 보다 역동적인 애니매이션 효과를 주었습니다.
+> 모든 페이지에 공통으로 추가하였음.
+- **react-reveal** 라이브러리를 사용하여 이미지에 효과를 주었습니다.
