@@ -10,6 +10,15 @@
     border-bottom: 1px solid black;
     z-index: 100;
     justify-content: space-around;
+    background-color: white;
+
+    transition-timing-function: ease-in;
+    transition: all 0.5s
+}
+
+.nav__anim {
+    background-color: transparent;
+    border: none;
 }
 
 .navBar > a {
@@ -71,6 +80,9 @@
     .navBar {
         justify-content: space-around;
         width: 100%;
+    }
+    .nav__anim .nav__contents.unactive li:nth-child(1) {
+        border-top: 1px solid black;
     }
     .nav__burger {
         display: block;

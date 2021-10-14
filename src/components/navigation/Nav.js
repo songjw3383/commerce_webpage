@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import "./Nav.css"
 import logo from "../images/logo.png"
 import { Link } from 'react-router-dom'
@@ -7,7 +7,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 
 function Nav({totalItems}) {
-    
+    const [show, handleShow] = useState(false);
     const [burgerButton, setburgerButton] = useState(false)
     //console.log(totalItems)
     const responsiveHandling = () => {
@@ -16,8 +16,19 @@ function Nav({totalItems}) {
 
     // console.log(burgerButton)
 
+    useEffect(() => {
+        window.addEventListener("scroll", () => {
+            if(window.scrollY > 50) {
+                handleShow(true);
+            } else handleShow(false);
+        });
+        return () => {
+            window.removeEventListener("scroll");
+        };
+    },[])
+
     return (
-        <nav className="navBar">
+        <nav className={`navBar ${show && "nav__anim"}`}>
              <Link to="/"><div className="nav__logo">
                <img src={logo} alt="" />
             </div></Link>
