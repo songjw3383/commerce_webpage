@@ -1,5 +1,5 @@
 
-# 쇼핑몰 웹사이트 (Commerce Webpage) (진행중)
+# 쇼핑몰 웹사이트 (Commerce Webpage)
 ## 목적
 포트폴리오 목적으로 제작된 쇼핑몰 웹사이트 프로젝트입니다.
 프론트엔드 부분은 ReactJs 중심으로 제작되었으며, 백엔드 부분은 Commerce.js의 API를 활용하여 구축하였습니다.
@@ -59,10 +59,11 @@ React-router-dom을 활용하여 SPA의 구조 형태로 웹사이트를 제작�
 
 ## :bulb: 향후 추가 계획
 
-1. 반응형 웹 페이지 보완 필요
-- Navigation Bar 및 아이템 목록 개수 표시만 완료.
-2. 로그 인/아웃 기능 추가
-- MongoDB 와 Mongoose를 사용하여 구축해볼 예정.
+1. 반응형 웹 페이지 보완 --- 완료 :heavy_check_mark: 
+- Navigation Bar 및 화면 크기에 따른 아이템 개수 표시
+2. 로그 인/아웃 및 회원 가입 기능 추가 --- 완료 :heavy_check_mark:
+- Firebase의 Authentication을 사용해 구축.
+- Redux를 활용하여 회원 정보 상태를 관리.
 3. 결제 기능 --- 완료 :heavy_check_mark:
 - Commerce.js 에 내장된 API를 활용해볼 예정.
 4. Project 페이지 --- 완료 :heavy_check_mark:
@@ -86,3 +87,29 @@ React-router-dom을 활용하여 SPA의 구조 형태로 웹사이트를 제작�
 - Navbar에 효과를 추가함으로써 보다 역동적인 애니매이션 효과를 주었습니다.
 > 모든 페이지에 공통으로 추가하였음.
 - **react-reveal** 라이브러리를 사용하여 이미지에 효과를 주었습니다.
+
+
+### 4. 로그인/아웃 및 회원 상세 정보 페이지
+![signin](https://user-images.githubusercontent.com/56250064/139695697-cc8a5f4d-0b4b-49a6-a41a-f0aaebd1d1a8.gif)
+
+#### 상세기능 및 설명
+1. 이메일 및 패스워드를 사용한 방법
+- 계정이 있다면 이메일과 패스워드 입력 후 로그인 가능.
+- 계정이 없다면 회원 가입 후 가입한 계정으로 로그인 가능.
+- 로그인 성공 시 메인 화면으로 이동.
+<hr />
+
+<에러>
+- 회원 가입 시 입력한 **두 비밀번호가 틀릴 경우** 에러 메세지 표시.
+- 회원 가입 시 **비밀번호는 최소 6자리 이상**이 여야 함.
+- 로그인 시 입력한 **계정이 없다면** 에러 메세지 표시.
+<hr />
+
+2. Google 계정을 사용한 로그인 방법
+- Sign-in with Google 버튼을 통해 구글 계정으로 로그인 가능.
+<hr />
+
+3. 회원 상세 정보 (Sign-out)
+- 로그인 성공 시, Redux의 상태 관리를 통해 Navbar의 SignIn을 SignOut으로 변경.
+- 변경된 후, SignOut 페이지로 이동이 가능하며, USER_INFO 리듀서로 회원 상세 정보 표시.
+- Firebase의 Authentication을 사용해 로그아웃 및 회원 탈퇴 가능
