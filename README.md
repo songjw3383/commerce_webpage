@@ -38,6 +38,7 @@ React-router-dom을 활용하여 SPA의 구조 형태로 웹사이트를 제작�
 4. Redux
 5. Material-UI
 6. commerce.js (for backend)
+7. Firebase
 <hr/>
 
 *etc* 
